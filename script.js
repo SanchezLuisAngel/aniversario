@@ -1,8 +1,10 @@
 const START = new Date(2026, 4, 9); // 9 de mayo 2026
+const hoy = new Date();  //da la fecha de hoy
+const dia = hoy.getDate()  //me da el numero de dia en el que estamos
 
 const messages = [
-    // { text: "Hay días que se vuelven sagrados sin que nadie los declare. El 9 de mayo fue uno de esos: el primer día de nosotros, el inicio de algo que vale la pena celebrar cada mes.", author: "— Desde el 9 de mayo ✦" },
-                    { text: "Sabes una cosa mi vida❤️, eres muy bonita, eres muy hermosa quiero pasar todo el tiempo contigo pero ya no estoy estudiando mucho, cuando quiero intentarlo solo pienso en ti y la verdad me encantaria desirtelo en persona pero simplemente no puedo, 'llevo 4 horas escribiendo esto, va a estar disponible hasta las 11:00 PM del 8) pero eso te lo digo por aca y si no te contesto los mensajes algunos ratos es por que estoy tratando de estudiar, ahora tengo muchos pendientes y el poco tiempo que tengo te lo doy a ti. ESPERO QUE ENTIENDAS, TE AMO MAS DE LO QUE DEMUESTRO❤️. ", author: "— Si lo leiste enviame un '🤖'. ✦" },
+    { text: "Hay días que se vuelven sagrados sin que nadie los declare. El 9 de mayo fue uno de esos: el primer día de nosotros, el inicio de algo que vale la pena celebrar cada mes.", author: "— Desde el 9 de mayo ✦" },
+    // { text: "Sabes una cosa mi vida❤️, eres muy bonita, eres muy hermosa quiero pasar todo el tiempo contigo pero ya no estoy estudiando mucho, cuando quiero intentarlo solo pienso en ti y la verdad me encantaria desirtelo en persona pero simplemente no puedo, 'llevo 4 horas escribiendo esto, va a estar disponible hasta las 11:00 PM del 8) pero eso te lo digo por aca y si no te contesto los mensajes algunos ratos es por que estoy tratando de estudiar, ahora tengo muchos pendientes y el poco tiempo que tengo te lo doy a ti. ESPERO QUE ENTIENDAS, TE AMO MAS DE LO QUE DEMUESTRO❤️. ", author: "— Si lo leiste enviame un '🤖'. ✦" },
     { text: "Cada mes que pasa es un capítulo más de algo bonito 📖✨. Cada vez que el calendario llega al 9 📅💖, es una razón para sonreír 😊🌸 y recordar que esto que construimos juntos sigue creciendo 🌱💞.", author: "— Celebrando cada aniversario ✦" },
     { text: "No hace falta esperar un mes para celebrar 🎉💫. Cada día contigo ya es una razón 🌞❤️.", author: "— Cada día contigo💓 ✦" },
     { text: "Los meses se van acumulando 📆✨ y con ellos los momentos 🌟, las risas 😂💫, los recuerdos 📸💖. Para siempre es una promesa grande 🌌💍, pero la vamos construyendo de apoquitos🌹📅❤️.", author: "— Para siempre, de a pocos ✦" }
@@ -67,9 +69,9 @@ function updateAll() {
     const dLeft = Math.ceil(msLeft / 86400000);
     const nextMes = monthNames[next.getMonth()];
 
-    if (dLeft === 0) {
+    if (dia == 9) {
         document.getElementById('nextLabel').textContent = '✨ ¡Es hoy es hoy, feliz Aniversario';
-    } else if (dLeft === 1) {
+    } else if (dia == 8) {
         document.getElementById('nextLabel').textContent = `Aniversario de ${nextMes} mañana`;
     } else {
         document.getElementById('nextLabel').textContent = `Aniversario de ${nextMes} es en ${dLeft} días`;
