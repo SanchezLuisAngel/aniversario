@@ -1,0 +1,48 @@
+body {
+    background-color: #0b0b1a;
+    color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+.galeria {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #ff69b4;
+    border-radius: 12px;
+    padding: 15px;
+    width: 200px;
+    box-shadow: 0 0 15px #ff69b4;
+    transition: transform 0.3s ease;
+}
+
+.item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #ff1493;
+}
+
+.item img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.item p {
+    font-size: 16px;
+    color: #ffd700;
+    margin: 0;
+}
+
+.bot-regreso {
+    display: block;
+    display: flex;
+    text-align: left;
+}

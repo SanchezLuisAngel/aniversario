@@ -122,3 +122,7 @@ document.getElementById('heartBtn').addEventListener('click', e => {
         setTimeout(() => el.remove(), 1500);
     }
 });
+
+function toggleMenu() {
+    document.getElementById("menue").classList.toggle("show");
+}
