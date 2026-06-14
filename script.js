@@ -123,6 +123,26 @@ document.getElementById('heartBtn').addEventListener('click', e => {
     }
 });
 
+// boton
 function toggleMenu() {
-    document.getElementById("menue").classList.toggle("show");
+    const menu = document.getElementById("menue");
+    const boton = document.querySelector(".boton-menu");
+
+    const estaAbierto = menu.classList.contains("visible");
+
+    if (estaAbierto) {
+        menu.classList.remove("visible");
+        boton.classList.remove("abierto");
+    } else {
+        menu.classList.add("visible");
+        boton.classList.add("abierto");
+    }
 }
+
+document.addEventListener("click", function (e) {
+    const contenedor = document.querySelector(".menu-contenedor");
+    if (contenedor && !contenedor.contains(e.target)) {
+        document.getElementById("menue").classList.remove("visible");
+        document.querySelector(".boton-menu").classList.remove("abierto");
+    }
+});
